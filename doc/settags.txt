@@ -1,0 +1,12 @@
+set tags logic
+	connect to db
+	get taglist,pkgidlist from software
+	for each result in tagtable
+		seperate taglist by ','
+		for each tag in taglist
+			seperate it to two by '::'
+			save each in soft_id,tag_main,tag_sub style
+		if got 1000+ results
+			save them in db tag_list
+		
+	

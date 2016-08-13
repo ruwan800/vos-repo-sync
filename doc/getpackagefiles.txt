@@ -1,0 +1,60 @@
+repo arch
+	/dists/maverick/
+	/dists/maverick-updates/
+	/dists/maverick-security/
+	/dists/maverick-proposed/
+	/dists/maverick-backports/
+	
+	in each abov folder
+		main/
+		multiverse/
+		restricted/
+		universe/
+		
+	ie: /dists/maverick/universe/binary-i386/
+
+#################################################
+
+config repo content
+	repo:repoDir
+	repo:ubuntuVersionName
+	repo:mainCategories
+	repo:subCategories
+	repo:binaryPrefix
+	repo:externalLink
+	
+###################################################
+
+set tempDir as repo:repoDir
+
+check for local repo or external one
+	if local handle:
+	if external get files, handle
+
+
+if external
+get ubuntu version name from ini as
+	repo:ubuntuVersionName
+get browse dirs from config
+	repo:mainCategories
+	repo:subCategories
+get binary prefix (binary-i386) as
+	repo:binaryPrefix
+	
+get .gz	else try .bz2
+
+save .gz file as mainCategory__subCategory__pkgname style
+		
+put them in repo:repoDir as in repo
+
+do everythin as in repoDir
+
+
+if internal
+	nothing to do here
+
+#############################################################
+
+if external
+	remove temp files
+

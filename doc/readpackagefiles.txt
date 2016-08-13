@@ -1,0 +1,34 @@
+
+	now all the packages are in repo:repodir
+	get all the dirs in repo
+	for each of them:
+		get the main cat
+		get all the dirs in repo/main
+		for each of them:
+			get the sub cat
+			get all files in repo/main/sub
+			if files:
+				for each of them:
+					get the filename
+					if its Packages.gz:
+						do it
+						break
+					elif its Packages.bz2:
+						do it
+						break
+					else:
+						say "no Package file found in dirname"
+			else:
+				say "no Package file found in dirname"
+				
+	for each list file in repo
+		we read the file
+		we call pkgList2DB(file pointer,maincat,subcat)
+	we can delete repodir if our repo is in remote location
+
+
+
+what we need to know on python
+	string - part of it
+		s = string[len(part):]
+	

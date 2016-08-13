@@ -1,0 +1,14 @@
+
+
+
+
+putting data into db:
+	get pkgFiles
+		download them if they are in a remote location
+	read them and put in db
+		for each in fileset
+			read and put in db
+	put deps in db
+	put tag in db
+
+

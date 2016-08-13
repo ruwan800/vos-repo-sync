@@ -1,0 +1,60 @@
+simplification
+	no gui
+	this code is only for the server
+
+resources we need
+	that awkward cron
+	python-mysql package(need exact name)
+
+what actually we need to know
+	about classes __init__
+	
+	python mysql *s
+	python to access intrnet and download file
+	extract .gz s with python
+	root access with python
+	format(),partition(),strip(),split(),replace(),
+	lists,dicts
+	try: except  Exception as error:
+	cron jobs
+	create tar.gz package
+	create .deb package	
+	read .ini s
+	
+
+	
+what we think we do
+	a code to trigger this program to run automatically
+		need to messin with crons(may be them will be put on post inst in a deb)
+	a code to identify repo change
+		need to create remote connection with repo
+	a code to get Packages.gz fileset
+		need to download packages.gz files
+		and to extract them
+	a code to insert their data into software database
+		we did this as php
+		we need to connect to db
+	a code to set dependancies
+		done but need to modify
+	a code to set tags
+		need to get them from db
+		:: and comma matters
+		need 4 fields
+			id
+			soft_id
+			tag_value1
+			tag_value2
+	need to create a ini file to store data about db and repo
+		db init
+		repository
+		ubuntu version
+	need a .py to connect to database
+		common dbconnect
+		select
+			
+		create
+			table if not exsists
+		insert
+			delayed
+			ignore
+		drop table in each data insert(this is the easy way for deps and tags)

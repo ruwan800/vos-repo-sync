@@ -1,0 +1,79 @@
+how we do it:
+	function call comes file pointer
+		and main andsub cats
+	we read the file pointer with readline()
+	then put them in our tempdb
+
+
+for line in file
+	if first char is blank
+		if it has only 3 char
+			add "\n" to desc_more
+		else
+			strip first space
+			add to desc_more 
+	else strip it
+		partition it by ":"
+		if first part is what we need
+			set it as we need it
+		else if its not one what we needed, put it into moreInfo
+		else if line has only 1 char
+			create a string
+
+	if we got 100 of them create sql query and exec it put into sc_temp
+
+
+let sql do the rest. thats fast
+
+some colums on software table
+	package
+	#installed_size	 _=>-
+	size
+	version
+	priority
+	section
+	maintainer
+	homepage
+	source
+	description
+	architecture
+	filename
+	tag
+	depends
+	suggests
+	recommends
+	#desc_more
+	provides
+	replaces
+	conflicts
+	#more_info
+	
+
+what we need on python
+	dbconnect
+	readline
+	method to get the first char
+		char = string[0]
+	method to get the length of str (len(str))
+		len(string)
+	"".format()
+	//while loop in python(not needed: for line in file: works )
+	method similar to php addslashes
+		def replaceSpecialChars(text):
+			speecialChars = { "&":"&amp;", "\"":"&quot;", "'":"&#039;", "<":"&lt;", ">":"&gt;"}
+			if text:
+				for specialChar in speecialChars:
+					text = text.replace(specialChar,speecialChars[specialChar])
+			return text		
+		
+	//method to get current timestamp. ##(MySQL will do it)
+	put a string and a function as key:value in dict
+	//get the key from a dict	(not needed: we can use dict[string] to refer value)
+	get the value from a dict
+		string = dict[string]
+	method to remove first char
+		string = string[1:]
+	//check the end of file(not needed)
+	
+	
+	
